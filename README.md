@@ -8,10 +8,9 @@ Aplikasi berbasis Web Responsive (Mobile Friendly)
 - Vote Maksimal 1 kali
 
 ### Tools
-- NodeJS
-- ExpressJS
-- MongoDB
-- VueJS
+- Codeigniter
+- jQuery
+- Bootstrap
 
 ### Gambaran Aplikasi 
 Deksripsi...soon
