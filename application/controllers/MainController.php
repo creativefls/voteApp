@@ -31,6 +31,11 @@ class MainController extends CI_Controller {
 		}
 	}
 
+	function login()
+	{
+		$this->load->view('login');
+	}
+
 }
 
 /* End of file MainController.php */

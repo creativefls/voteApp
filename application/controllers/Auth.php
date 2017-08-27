@@ -40,6 +40,8 @@ class Auth extends CI_Controller {
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
 
+			// this is will be modified -- indrakusuma.web.id
+			$this->data['title'] = "Login Terlebih Dahulu..";
 			$this->_render_page('auth/index', $this->data);
 		}
 	}

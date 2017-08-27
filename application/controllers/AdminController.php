@@ -24,7 +24,7 @@ class AdminController extends CI_Controller{
 		$data['title'] 			= '';
 		$data['custom_css'] = '';
 		$data['custom_js'] 	= '';
-		$data['content'] 		= '';
+		$data['content'] 		= 'contents/adminDashboard';
 		// load file main
 		$this->load->view('main', $data);
 	}
