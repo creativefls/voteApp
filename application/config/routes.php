@@ -51,6 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'MainController';
 $route['members'] = 'MemberController';
+$route['members/kelas_workshop'] = 'MemberController/kelas_workshop';
+$route['members/voting_komunitas'] = 'MemberController/voting_komunitas';
+$route['members/informasi'] = 'MemberController/informasi';
 $route['rangers'] = 'AdminController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

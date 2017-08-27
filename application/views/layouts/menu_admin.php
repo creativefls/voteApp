@@ -6,7 +6,7 @@
       </div>
 
       <ul class="nav">
-          <li class="active">
+          <li <?php if($page==""){echo 'class="active"';}?>>
               <a href="#">
                   <i class="ti-panel"></i>
                   <p>Dashboard</p>

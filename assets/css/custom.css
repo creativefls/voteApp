@@ -78,3 +78,10 @@
 .nav p{
   text-transform: capitalize !important;
 }
+
+.img-informasi{
+  clear: left;
+  float: left;
+  margin-right: 0.7em;
+  max-width: 6em;
+}

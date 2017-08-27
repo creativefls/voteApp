@@ -20,8 +20,11 @@ class AdminController extends CI_Controller{
 
   public function index()
 	{
-		$data['user']				= $this->ion_auth->user()->row();
-		$data['title'] 			= '';
+    // funtion data
+    $data['user']				= $this->ion_auth->user()->row();
+    $data['page']       = $this->uri->segment(2);
+      
+		$data['title'] 			= 'Selamat Datang Rangers!';
 		$data['custom_css'] = '';
 		$data['custom_js'] 	= '';
 		$data['content'] 		= 'contents/adminDashboard';
