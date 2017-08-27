@@ -85,3 +85,12 @@
   margin-right: 0.7em;
   max-width: 6em;
 }
+
+.numbers {
+    font-size: 1.5em !important;
+}
+
+.img-voting{
+  max-width: 5em;
+  margin-left: 1em;
+}
