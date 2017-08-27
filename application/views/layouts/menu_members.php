@@ -13,21 +13,27 @@
               </a>
           </li>
           <li>
-              <a href="user.html">
+              <a href="#">
                   <i class="ti-user"></i>
                   <p>Workshop</p>
               </a>
           </li>
           <li>
-              <a href="table.html">
+              <a href="#l">
                   <i class="ti-view-list-alt"></i>
                   <p>Voting</p>
               </a>
           </li>
           <li>
-              <a href="typography.html">
+              <a href="#">
                   <i class="ti-announcement"></i>
                   <p>Informasi</p>
+              </a>
+          </li>
+          <li>
+              <a href="<?=base_url();?>auth/logout">
+                  <i class="ti-lock"></i>
+                  <p>Logout</p>
               </a>
           </li>
       </ul>

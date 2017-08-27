@@ -21,7 +21,7 @@ class MainController extends CI_Controller {
 		*/
 		if ($this->ion_auth->in_group(1))
 		{
-			redirect('rangers','refresh');
+			redirect('AdminController');
 			// echo "admin";
 		}
 		else if($this->ion_auth->in_group(2))

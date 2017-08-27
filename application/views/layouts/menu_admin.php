@@ -25,8 +25,8 @@
               </a>
           </li>
           <li>
-              <a href="upgrade.html">
-                  <i class="ti-export"></i>
+              <a href="<?=base_url();?>auth/logout">
+                  <i class="ti-lock"></i>
                   <p>Logout</p>
               </a>
           </li>
