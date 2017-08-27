@@ -68,3 +68,13 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+
+/* my custom -- indrakusuma.web.id */
+.c-logo{
+  max-width: 80%;
+  margin-top: -0.7em;
+}
+
+.nav p{
+  text-transform: capitalize !important;
+}

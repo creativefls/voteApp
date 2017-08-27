@@ -14,12 +14,21 @@ class MainController extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] 			= '';
-		$data['custom_css'] = '';
-		$data['custom_js'] 	= '';
-		$data['content'] 		= '';
-		// load file main
-		$this->load->view('main', $data);
+		/*
+		* ROLE user
+		* 1 for Administrator
+		* 2 for Member / Delegates
+		*/
+		if ($this->ion_auth->in_group(1))
+		{
+			redirect('rangers','refresh');
+			// echo "admin";
+		}
+		else if($this->ion_auth->in_group(2))
+		{
+			redirect('MemberController');
+			// echo "delegates";
+		}
 	}
 
 }
