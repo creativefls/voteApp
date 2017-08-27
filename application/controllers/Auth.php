@@ -155,7 +155,11 @@ class Auth extends CI_Controller {
 			);
 
 			// render
-			$this->_render_page('auth/change_password', $this->data);
+			// $this->_render_page('auth/change_password', $this->data);
+			$this->data['user']		 = $this->ion_auth->user()->row();
+			$this->data['title']   = 'Profil Saya';
+			$this->data['content'] = 'contents/user_profile';
+			$this->_render_page('main', $this->data);
 		}
 		else
 		{

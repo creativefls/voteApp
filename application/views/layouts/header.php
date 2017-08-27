@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#"> <i class="ti-user"></i> <p>Hai, <?=$user->first_name;?> !</p>
+                    <a href="<?=base_url();?>auth/change_password"> <i class="ti-user"></i> <p>Hai, <?=$user->first_name;?> !</p>
                     </a>
                 </li>
             </ul>
