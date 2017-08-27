@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card">
                 <div class="content">
                     <div class="row">
@@ -11,90 +11,56 @@
                         </div>
                         <div class="col-xs-7">
                             <div class="numbers">
-                                <p>Capacity</p>
-                                105GB
+                                <p>Kelas</p>
+                                Presentasi
                             </div>
                         </div>
                     </div>
                     <div class="footer">
                         <hr />
                         <div class="stats">
-                            <i class="ti-reload"></i> Updated now
+                            <div class="col-xs-12">
+                              <div class="col-xs-6">
+                                <i class="ti-ruler-pencil"></i> 10/49
+                              </div>
+                              <div class="col-xs-6">
+                                <a href="#" class="btn btn-success btn-xs btn-fill btn-wd">Pilih Kelas</a>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-6">
+
+        <!-- contoh kelas penuh -->
+        <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card">
                 <div class="content">
                     <div class="row">
                         <div class="col-xs-5">
-                            <div class="icon-big icon-success text-center">
-                                <i class="ti-wallet"></i>
+                            <div class="icon-big icon-warning text-center">
+                                <i class="ti-server"></i>
                             </div>
                         </div>
                         <div class="col-xs-7">
                             <div class="numbers">
-                                <p>Revenue</p>
-                                $1,345
+                                <p>Kelas</p>
+                                Presentasi
                             </div>
                         </div>
                     </div>
                     <div class="footer">
                         <hr />
                         <div class="stats">
-                            <i class="ti-calendar"></i> Last day
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card">
-                <div class="content">
-                    <div class="row">
-                        <div class="col-xs-5">
-                            <div class="icon-big icon-danger text-center">
-                                <i class="ti-pulse"></i>
+                            <div class="col-xs-12">
+                              <div class="col-xs-6">
+                                <i class="ti-ruler-pencil"></i> Kelas Penuh
+                              </div>
+                              <div class="col-xs-6">
+                                <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd">Penuh</a>
+                              </div>
                             </div>
-                        </div>
-                        <div class="col-xs-7">
-                            <div class="numbers">
-                                <p>Errors</p>
-                                23
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <hr />
-                        <div class="stats">
-                            <i class="ti-timer"></i> In the last hour
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card">
-                <div class="content">
-                    <div class="row">
-                        <div class="col-xs-5">
-                            <div class="icon-big icon-info text-center">
-                                <i class="ti-twitter-alt"></i>
-                            </div>
-                        </div>
-                        <div class="col-xs-7">
-                            <div class="numbers">
-                                <p>Followers</p>
-                                +45
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <hr />
-                        <div class="stats">
-                            <i class="ti-reload"></i> Updated now
                         </div>
                     </div>
                 </div>

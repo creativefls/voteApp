@@ -1,6 +1,6 @@
 <div class="sidebar-wrapper">
       <div class="logo">
-          <a href="<?=base_url();?>" class="simple-text">
+          <a href="#" class="simple-text">
               Delegates
           </a>
       </div>
@@ -15,13 +15,13 @@
           <li>
               <a href="#">
                   <i class="ti-user"></i>
-                  <p>Workshop</p>
+                  <p>Kelas Workshop</p>
               </a>
           </li>
           <li>
               <a href="#l">
-                  <i class="ti-view-list-alt"></i>
-                  <p>Voting</p>
+                  <i class="ti-thumb-up"></i>
+                  <p>Voting Komunitas</p>
               </a>
           </li>
           <li>
