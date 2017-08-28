@@ -71,8 +71,9 @@
 
 /* my custom -- indrakusuma.web.id */
 .c-logo{
-  max-width: 80%;
-  margin-top: -0.7em;
+  max-width: 60%;
+  margin-top: -0.6em;
+  margin-left: 0.5em;
 }
 
 .nav p{

@@ -21,7 +21,6 @@ class MemberController extends CI_Controller{
   public function index()
   {
     $data['user']				= $this->ion_auth->user()->row();
-    $data['page']       = $this->uri->segment(2);
 
     $data['title'] 			= 'Selamat Datang Delegates';
     $data['content'] 		= 'contents/delegatesDashboard';
@@ -32,7 +31,7 @@ class MemberController extends CI_Controller{
   function kelas_workshop()
   {
     $data['user']				= $this->ion_auth->user()->row();
-    $data['page']       = $this->uri->segment(2);
+    $data['list_kelas'] = $this->MainModel->getListData('kelas_workshop',null,null,null);
 
 		$data['title'] 			= 'Kelas Workshop';
 		$data['content'] 		= 'contents/kelas_workshop';
@@ -43,7 +42,6 @@ class MemberController extends CI_Controller{
   function voting_komunitas()
   {
     $data['user']				= $this->ion_auth->user()->row();
-    $data['page']       = $this->uri->segment(2);
 
 		$data['title'] 			= 'Voting Komunitas';
 		$data['content'] 		= 'contents/vote_komunitas';
@@ -54,7 +52,7 @@ class MemberController extends CI_Controller{
   function informasi()
   {
     $data['user']				= $this->ion_auth->user()->row();
-    $data['page']       = $this->uri->segment(2);
+    $data['list_kelas'] = $this->MainModel->getListData('kelas_workshop',null,null,null);
 
 		$data['title'] 			= 'Informasi';
 		$data['content'] 		= 'contents/informasi';

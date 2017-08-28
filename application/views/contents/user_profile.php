@@ -7,7 +7,7 @@
 				</div>
 				<div class="content">
 					<div class="author">
-						<img class="avatar border-white" src="https://user-images.githubusercontent.com/10141928/29747027-e5da50a0-8b16-11e7-9a25-73e3dfa65363.png" alt="FLS Logo">
+						<img class="avatar border-gray" src="https://user-images.githubusercontent.com/10141928/29747027-e5da50a0-8b16-11e7-9a25-73e3dfa65363.png" alt="FLS Logo">
 						<h4 class="title"><?php echo $user->first_name." ".$user->last_name;?><br>
                                            <a href="#"><small><?php echo $user->email; ?></small></a>
                                         </h4>

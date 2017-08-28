@@ -1,3 +1,4 @@
+<?php $page = $this->uri->segment(2); ?>
 <div class="sidebar-wrapper">
       <div class="logo">
           <a href="#" class="simple-text">
