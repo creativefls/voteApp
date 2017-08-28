@@ -3,33 +3,24 @@ Aplikasi berbasis Web Responsive (Mobile Friendly)
 
 ## Spesifikasi Teknis
 - Berbasis Web (Mobile)
-- Validasi Akun
-- Dapat Vote Setelah Login
-- Vote Maksimal 1 kali
+- Validasi Akun (rangers/delegates)
+- Dapat Vote | Pilih kelas Setelah Login.
+- Vote Maksimal 1 kali.
 
 ### Tools
 - Codeigniter
 - jQuery
 - Bootstrap
 
-### Gambaran Aplikasi 
-Deksripsi...soon
+### Gambaran Aplikasi
+VoteApp FLS ini merupakan aplikasi yang berfungsi untuk memilih (voting) komunitas terbaik pada acara GALA FLS 2017. Selain untuk voting, aplikasi ini juga digunakan sebagai sarana pemilihan kelas Workshop yang terdapat pada event FLS 2017. Untuk saat ini, aplikasi berbasis *Web Responsive*. Kedepanya akan dibuat PWA (Progressive Web Apps). Mau berkontribusi ? kami terbuka! :)
+
 ### User
 - Rangers FLS
 - Delegates FLS terpilih
 
-
 ### Release
-4 September 2017
+4 September 2017 (bismillah :))
 
-### Link 
+### Link
 [vote.futureleadersummit.org](http://vote.futureleadersummit.org)
-
-
----
-
----
-
----
-# REFERENSI
-https://github.com/imtoobose/voting-app

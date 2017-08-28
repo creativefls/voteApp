@@ -32,6 +32,7 @@ class MemberController extends CI_Controller{
   {
     $data['user']				= $this->ion_auth->user()->row();
     $data['list_kelas'] = $this->MainModel->getListData('kelas_workshop',null,null,null);
+    $data['idea_dev']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
 
 		$data['title'] 			= 'Kelas Workshop';
 		$data['content'] 		= 'contents/kelas_workshop';

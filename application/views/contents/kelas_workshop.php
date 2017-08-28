@@ -24,7 +24,7 @@
                               <div class="stats">
                                   <div class="col-xs-12">
                                     <div class="col-xs-6">
-                                      <i class="ti-ruler-pencil"></i> Kelas Penuh
+                                      <i class="ti-ruler-pencil"></i> <strong> <?=$idea_dev['jumlah'];?>/49</strong>
                                     </div>
                                     <div class="col-xs-6">
                                       <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>

@@ -51,6 +51,16 @@ class MainModel extends CI_Model {
     $this->db->from($table);
     return $this->db->get()->row_array();
   }
+
+  // model for specific
+  function countObject($table, $object, $where)
+  {
+    $this->db->select('count('.$object.') as jumlah');
+    $this->db->from($table);
+    $this->db->where($where);
+
+    return $this->db->get()->row_array();
+  }
 }
 
 /* End of file MainModel.php */

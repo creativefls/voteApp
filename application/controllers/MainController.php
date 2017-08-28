@@ -6,10 +6,6 @@ class MainController extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		// check sudah login belum
-		if (!$this->ion_auth->logged_in()) {
-			redirect('auth/login');
-		}
 	}
 
 	public function index()
@@ -19,22 +15,30 @@ class MainController extends CI_Controller {
 		* 1 for Administrator
 		* 2 for Member / Delegates
 		*/
-		if ($this->ion_auth->in_group(1))
-		{
-			redirect('rangers');
-			// echo "admin";
+		// check sudah login belum
+		if (!$this->ion_auth->logged_in()) {
+			redirect('auth/login');
 		}
-		else if($this->ion_auth->in_group(2))
+		else
 		{
-			redirect('members');
-			// echo "delegates";
+			if ($this->ion_auth->in_group(1))
+			{
+				redirect('rangers');
+				// echo "admin";
+			}
+			else if($this->ion_auth->in_group(2))
+			{
+				redirect('members');
+				// echo "delegates";
+			}
 		}
 	}
 
-	function login()
+	public function eror404()
 	{
-		$this->load->view('login');
+		$this->load->view('errors/404');
 	}
+
 
 }
 
