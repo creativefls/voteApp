@@ -228,7 +228,7 @@
       <!-- end of list kelas workshop -->
       <?php
 		} else {
-		  $kelas_saya = $this->MainModel->getRowDataWhere('users,kelas_workshop','*','users.id_workshop = kelas_workshop.id_workshop');
+		  $kelas_saya = $this->MainModel->getRowDataWhere('users,kelas_workshop','*','users.id_workshop = kelas_workshop.id_workshop AND users.id = '.$user->id.'');
       ?>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
         <div class="card card-user">
