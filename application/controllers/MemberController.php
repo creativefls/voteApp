@@ -32,12 +32,41 @@ class MemberController extends CI_Controller{
   {
     $data['user']				= $this->ion_auth->user()->row();
     $data['list_kelas'] = $this->MainModel->getListData('kelas_workshop',null,null,null);
-    $data['idea_dev']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
+    //cek ketersediaan kelas
+    $data['branding']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 3');
+    $data['presentation_skill'] = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
+    $data['kelas_content']      = $this->MainModel->countObject('users','id_workshop','id_workshop = 2');
+    $data['idea_develop']       = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
+    $data['customer_insight']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
 
 		$data['title'] 			= 'Kelas Workshop';
 		$data['content'] 		= 'contents/kelas_workshop';
 		// load file main
 		$this->load->view('main', $data);
+  }
+
+  // pilih kelas
+  function pilih_kelas($user_id, $id_workshop)
+  {
+    // cek kuota kelas terlebih dulu
+    $kuota = $this->MainModel->countObject('users','id_workshop','id_workshop = '.$id_wokshop.'');
+    if ($kuota['jumlah'] <= 49) {
+      // tambahkan user ke kelas tersebut
+      // dengan cara update data id_workshop pada table users
+      $data = array(
+        'id_workshop' => $id_workshop
+      );
+      $this->MainModel->updateData('users', $data, 'id = '.$user_id.'');
+      // periksa apakah terjadi update didatabase
+      if ($this->db->affected_rows()) {
+        $this->session->set_flashdata('pesan','Yey! Kamu berhasil ikut kelas');
+        redirect('members/kelas_workshop');
+      }
+      else {
+        $this->session->set_flashdata('pesan','Maaf Young Leaders!, kelas penuh :(');
+        redirect('members/kelas_workshop');
+      }
+    }
   }
 
   function voting_komunitas()
