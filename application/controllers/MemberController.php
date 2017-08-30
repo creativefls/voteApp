@@ -49,8 +49,14 @@ class MemberController extends CI_Controller{
   function pilih_kelas($user_id, $id_workshop)
   {
     // cek kuota kelas terlebih dulu
-    $kuota = $this->MainModel->countObject('users','id_workshop','id_workshop = '.$id_wokshop.'');
-    if ($kuota['jumlah'] <= 49) {
+    $kuota = $this->MainModel->countObject('users','id_workshop','id_workshop = '.$id_workshop.'');
+    $nilai = $kuota['jumlah'];
+
+    if ($nilai >= 50) {
+      $this->session->set_flashdata('pesan','Maaf Young Leaders!, Kamu kurang cepet.. :( <br> Pilih kelas lain ya..');
+      redirect('members/kelas_workshop');
+    }
+    else if($nilai >= 0 && $nilai <= 49){
       // tambahkan user ke kelas tersebut
       // dengan cara update data id_workshop pada table users
       $data = array(
@@ -60,10 +66,6 @@ class MemberController extends CI_Controller{
       // periksa apakah terjadi update didatabase
       if ($this->db->affected_rows()) {
         $this->session->set_flashdata('pesan','Yey! Kamu berhasil ikut kelas');
-        redirect('members/kelas_workshop');
-      }
-      else {
-        $this->session->set_flashdata('pesan','Maaf Young Leaders!, kelas penuh :(');
         redirect('members/kelas_workshop');
       }
     }

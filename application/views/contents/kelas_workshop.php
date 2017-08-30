@@ -7,7 +7,7 @@
       ?>
       <!-- pesan dari Admin -->
       <div class="col-md-12">
-        <div class="alert alert-info">
+        <div class="alert alert-warning">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span><b> Informasi - </b> <?=$info;?></span>
         </div>
@@ -80,9 +80,21 @@
                   <div class="col-xs-6">
                     <i class="ti-ruler-pencil"></i> <strong> <?=$kelas_content['jumlah'];?>/49</strong>
                   </div>
-                  <div class="col-xs-6">
-                    <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
-                  </div>
+                  <?php if ($kelas_content['jumlah'] >= 49) {
+                    ?>
+                    <!-- kelas penuh -->
+                    <div class="col-xs-6">
+                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
+                    </div>
+                    <?php
+                  } else {
+                    ?>
+                    <!-- kelas tersedia -->
+                      <div class="col-xs-6">
+                        <a href="<?=base_url();?>MemberController/pilih_kelas/<?=$user->id;?>/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Tambah Kelas</a>
+                      </div>
+                    <?php
+                  }?>
                 </div>
               </div>
             </div>
@@ -109,9 +121,22 @@
                   <div class="col-xs-6">
                     <i class="ti-ruler-pencil"></i> <strong> <?=$branding['jumlah'];?>/49</strong>
                   </div>
-                  <div class="col-xs-6">
-                    <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
-                  </div>
+                  <!-- penuh atau tidak -->
+                  <?php if ($branding['jumlah'] >= 49) {
+                    ?>
+                    <!-- kelas penuh -->
+                    <div class="col-xs-6">
+                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
+                    </div>
+                    <?php
+                  } else {
+                    ?>
+                    <!-- kelas tersedia -->
+                      <div class="col-xs-6">
+                        <a href="<?=base_url();?>MemberController/pilih_kelas/<?=$user->id;?>/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Tambah Kelas</a>
+                      </div>
+                    <?php
+                  }?>
                 </div>
               </div>
             </div>
@@ -138,9 +163,21 @@
                   <div class="col-xs-6">
                     <i class="ti-ruler-pencil"></i> <strong> <?=$presentation_skill['jumlah'];?>/49</strong>
                   </div>
-                  <div class="col-xs-6">
-                    <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
-                  </div>
+                  <?php if ($presentation_skill['jumlah'] >= 49) {
+                    ?>
+                    <!-- kelas penuh -->
+                    <div class="col-xs-6">
+                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
+                    </div>
+                    <?php
+                  } else {
+                    ?>
+                    <!-- kelas tersedia -->
+                      <div class="col-xs-6">
+                        <a href="<?=base_url();?>MemberController/pilih_kelas/<?=$user->id;?>/4" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Tambah Kelas</a>
+                      </div>
+                    <?php
+                  }?>
                 </div>
               </div>
             </div>
@@ -167,9 +204,21 @@
                   <div class="col-xs-6">
                     <i class="ti-ruler-pencil"></i> <strong> <?=$customer_insight['jumlah'];?>/49</strong>
                   </div>
-                  <div class="col-xs-6">
-                    <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
-                  </div>
+                  <?php if ($customer_insight['jumlah'] >= 49) {
+                    ?>
+                    <!-- kelas penuh -->
+                    <div class="col-xs-6">
+                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Penuh</a>
+                    </div>
+                    <?php
+                  } else {
+                    ?>
+                    <!-- kelas tersedia -->
+                      <div class="col-xs-6">
+                        <a href="<?=base_url();?>MemberController/pilih_kelas/<?=$user->id;?>/5" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Tambah Kelas</a>
+                      </div>
+                    <?php
+                  }?>
                 </div>
               </div>
             </div>
