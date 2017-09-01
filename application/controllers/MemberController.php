@@ -32,6 +32,8 @@ class MemberController extends CI_Controller{
   {
     $data['user']				= $this->ion_auth->user()->row();
     $data['list_kelas'] = $this->MainModel->getListData('kelas_workshop',null,null,null);
+    // kelas dibuka ? 1 untuk kelas_workshop | 2 untuk vote kelas
+    $data['is_buka']    = $this->MainModel->getRowDataWhere('waktu_buka','is_buka as hasil','id_buka = 1');
     //cek ketersediaan kelas
     $data['branding']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 3');
     $data['presentation_skill'] = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
@@ -86,6 +88,8 @@ class MemberController extends CI_Controller{
   {
     $data['user']				     = $this->ion_auth->user()->row();
     $data['list_organisasi'] = $this->MainModel->getListData('komunitas',null,null,null);
+    // kelas dibuka ? 1 untuk kelas_workshop | 2 untuk vote kelas
+    $data['is_buka']    = $this->MainModel->getRowDataWhere('waktu_buka','is_buka as hasil','id_buka = 2');
 
 		$data['title'] 			= 'Voting Komunitas';
 		$data['content'] 		= 'contents/vote_organisasi';
