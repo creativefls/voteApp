@@ -5,6 +5,10 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="https://user-images.githubusercontent.com/10141928/29763334-dc42e228-8bfc-11e7-8b86-222741dcd7a4.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="https://user-images.githubusercontent.com/10141928/29763334-dc42e228-8bfc-11e7-8b86-222741dcd7a4.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- fullscreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
 	<meta content='#cecece' name='theme-color'/>
 
 	<title><?=$title;?> | #DaretoCreate Future Leader Summit 2017</title>
