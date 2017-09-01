@@ -26,7 +26,8 @@ class Auth extends CI_Controller {
 		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
+			// return show_error('You must be an administrator to view this page.');
+			redirect('MainController', 'refresh');
 		}
 		else
 		{
