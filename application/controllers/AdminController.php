@@ -22,14 +22,42 @@ class AdminController extends CI_Controller{
 	{
     // funtion data
     $data['user']				= $this->ion_auth->user()->row();
-    $data['page']       = $this->uri->segment(2);
-      
+
 		$data['title'] 			= 'Selamat Datang Rangers!';
-		$data['custom_css'] = '';
-		$data['custom_js'] 	= '';
-		$data['content'] 		= 'contents/adminDashboard';
+		$data['content'] 		= 'contents/admin/adminDashboard';
 		// load file main
 		$this->load->view('main', $data);
 	}
+
+  function bukaTutupKelas()
+  {
+    // funtion data
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['is_buka']    = $this->MainModel->getListData('waktu_buka',null,null,null);
+
+		$data['title'] 			= 'Buka-Tutup Kelas';
+		$data['content'] 		= 'contents/admin/is_buka';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
+  // function untuk update buka-tutup kelas
+  function buka_tutup($id_buka, $key)
+  {
+    // update ciee ciee
+    $data = array(
+      'is_buka' => $key
+    );
+    $this->MainModel->updateData('waktu_buka',$data,'id_buka = '.$id_buka.'');
+    if ($this->db->affected_rows()) {
+      // jika berhasil ada perubahan
+      $this->session->set_flashdata('pesan','Berhasil melakukan perubahan.');
+    }
+    else {
+      $this->session->set_flashdata('pesan','Tidak ada perubahan. Periksa Kembali');
+    }
+    redirect('rangers/bukaTutupKelas');
+  }
 
 }

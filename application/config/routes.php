@@ -54,6 +54,8 @@ $route['members'] = 'MemberController';
 $route['members/kelas_workshop'] = 'MemberController/kelas_workshop';
 $route['members/voting_komunitas'] = 'MemberController/voting_komunitas';
 $route['members/informasi'] = 'MemberController/informasi';
+// admin
+$route['rangers/bukaTutupKelas'] = 'AdminController/bukaTutupKelas';
 $route['rangers'] = 'AdminController';
 $route['404_override'] = 'MainController/eror404';
 $route['translate_uri_dashes'] = FALSE;
