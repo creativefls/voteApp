@@ -49,7 +49,7 @@ class MemberController extends CI_Controller{
   function pilih_kelas($user_id, $id_workshop)
   {
     // cek dulu apakah user udah memilih kelas.. kalau udah TOLAK AJA!!!!
-    $isFill = $this->MainModel->getRowDataWhere('users','id_workshop as hasil','id_workshop = '.$id_workshop.'');
+    $isFill = $this->MainModel->getRowDataWhere('users','id_workshop as hasil','id = '.$user_id.'');
     // cek hasilnya..
     if ($isFill['hasil'] != NULL) {
       // jika hasilnya tidak sama dengan NULL maka..
@@ -96,7 +96,7 @@ class MemberController extends CI_Controller{
   function vote($user_id, $id_komunitas)
   {
     // check apakah user sudah voting
-    $isFill = $this->MainModel->getRowDataWhere('users','id_komunitas as hasil','id_komunitas = '.$id_komunitas.'');
+    $isFill = $this->MainModel->getRowDataWhere('users','id_komunitas as hasil','id = '.$user_id.'');
     // cek hasilnya..
     if ($isFill['hasil'] != NULL) {
       // jika hasilnya tidak sama dengan NULL maka..
