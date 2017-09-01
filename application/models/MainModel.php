@@ -61,6 +61,7 @@ class MainModel extends CI_Model {
 
     return $this->db->get()->row_array();
   }
+  
 }
 
 /* End of file MainModel.php */
