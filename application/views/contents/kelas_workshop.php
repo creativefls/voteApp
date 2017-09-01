@@ -1,19 +1,12 @@
 <div class="container-fluid">
 	<div class="row">
 
-    <?php
-    $info = $this->session->flashdata('pesan');
-    if (isset($info)) {
-      ?>
-      <!-- pesan dari Admin -->
-      <div class="col-md-12">
-        <div class="alert alert-warning">
-            <button type="button" aria-hidden="true" class="close">×</button>
-            <span><b> Informasi - </b> <?=$info;?></span>
-        </div>
-      </div>
-      <?php
-    } ?>
+		<?php
+			$data['pesan']	= $this->session->flashdata('pesan');
+	    if (isset($data['pesan'])) {
+				$this->load->view('contents/notifikasi', $data);
+	    } ?>
+			
 		<!-- informasi kelas dibuka -->
 		<?php if ($is_buka['hasil'] == 0) {
 			// jika kelas belum dibuka

@@ -2,9 +2,8 @@
 	<div class="row">
 
 		<?php
-	    $info = $this->session->flashdata('pesan');
-			$data['pesan']	= $info;
-	    if (isset($info)) {
+			$data['pesan']	= $this->session->flashdata('pesan');
+	    if (isset($data['pesan'])) {
 				$this->load->view('contents/notifikasi', $data);
 	    } ?>
 
