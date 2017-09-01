@@ -60,4 +60,31 @@ class AdminController extends CI_Controller{
     redirect('rangers/bukaTutupKelas');
   }
 
+  // ***************************************************************
+  function list_workshop()
+  {
+    // funtion data
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['workshop']   = $this->MainModel->getListData('kelas_workshop',null,null,null);
+
+		$data['title'] 			= 'List Kelas Workshop';
+		$data['content'] 		= 'contents/admin/workshop_list';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
+  function peserta_workshop($id_workshop)
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['peserta']    = $this->MainModel->getListData('users','id_workshop = '.$id_workshop.'',null,null);
+    $data['workshop']   = $this->MainModel->getRowDataWhere('kelas_workshop','*','id_workshop = '.$id_workshop.'');
+
+		$data['title'] 			= 'Peserta Workshop';
+		$data['content'] 		= 'contents/admin/workshop_peserta';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
 }

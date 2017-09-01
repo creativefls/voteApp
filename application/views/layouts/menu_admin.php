@@ -8,19 +8,19 @@
 
       <ul class="nav">
           <li <?php if($page==""){echo 'class="active"';}?>>
-              <a href="#">
+              <a href="<?=base_url();?>">
                   <i class="ti-panel"></i>
                   <p>Dashboard</p>
               </a>
           </li>
-          <li <?php if($page=="kelas_workshop"){echo 'class="active"';}?>>
-              <a href="#">
+          <li <?php if($page=="list_workshop"){echo 'class="active"';}?>>
+              <a href="<?=base_url();?>adminController/list_workshop">
                   <i class="ti-agenda"></i>
                   <p>Kelas Workshop</p>
               </a>
           </li>
           <li <?php if($page=="hasil_voting"){echo 'class="active"';}?>>
-              <a href="">
+              <a href="<?=base_url();?>">
                   <i class="ti-bar-chart"></i>
                   <p>Hasil Voting</p>
               </a>
