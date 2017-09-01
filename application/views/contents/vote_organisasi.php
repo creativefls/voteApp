@@ -52,7 +52,27 @@
         else {
           $komunitas =  $this->MainModel->getRowDataWhere('users,komunitas','*','users.id_komunitas = komunitas.id_komunitas AND users.id = '.$user->id.'');
 
-          echo "kamu memilih ".$komunitas['nama_komunitas'];
+          ?>
+          <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="https://user-images.githubusercontent.com/10141928/29747006-4ddf9562-8b16-11e7-8c67-6046135e827d.png" alt="FLS header logo">
+                </div>
+                    <div class="author">
+                      <img class="avatar border-gray" src="<?=$komunitas['gambar_logo'];?>" alt="<?=$komunitas['nama_komunitas'];?>">
+                      <h4 class="title"><?=$komunitas['nama_komunitas'];?><br>
+                        <small><?=$komunitas['email'];?></small>
+                      </h4>
+
+                    </div>
+                    <hr>
+                    <p class="description text-center" style="padding:1em;">
+                        Halo <?=$komunitas['first_name'];?>! kamu telah melakukan voting pada komunitas  <strong><?=$komunitas['nama_komunitas'];?></strong>.<br> Terima kasih telah berpartisipasi Young Leaders!<br>
+                        <br>Salam dari Admin :D
+                    </p><br>
+            </div>
+          </div>
+          <?php
         }
           ?>
         <!-- end of list kelas workshop -->
