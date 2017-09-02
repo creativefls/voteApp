@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 30, 2017 at 04:00 
+-- Generation Time: Sep 02, 2017 at 10:20 
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -50,19 +50,20 @@ CREATE TABLE `kelas_workshop` (
   `id_workshop` int(11) NOT NULL,
   `nama_kelas` varchar(255) NOT NULL,
   `deskripsi` text NOT NULL,
-  `gambar_logo` varchar(255) NOT NULL
+  `gambar_logo` varchar(255) NOT NULL,
+  `ruang_kelas` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kelas_workshop`
 --
 
-INSERT INTO `kelas_workshop` (`id_workshop`, `nama_kelas`, `deskripsi`, `gambar_logo`) VALUES
-(1, 'Idea Development', 'Kelas ini bertujuan untuk menantang delegates bagaimana mereka dapat mengembangkan ide-idea yang selama ini mereka miliki agar menjadi suatu karya yang nyata.', 'https://user-images.githubusercontent.com/10141928/29752965-f91a375e-8b91-11e7-9791-1bd78efaa8e0.png'),
-(2, 'Content', 'Dalam kelas ini delegates akan diajarkan bagaimana cara mereka mengimplementasikan ide-ide yang mereka miliki ke dalam bentuk tulisan (content) yang efektif dan efisien untuk dapat disampaikan kepada masyarakat luas.', 'https://user-images.githubusercontent.com/10141928/29752967-f924a25c-8b91-11e7-8bc9-e8186a8f4072.png'),
-(3, 'Branding', 'Dalam kelas ini delegates akan belajar \'how to sell their idea\', dimana mereka akan belajar langkah-langkah kongkrit agar ide-ide hebat yang mereka miliki dapat terlihat menarik dan meyakinkan dan tentu saja disukai pula oleh orang lain.', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
-(4, 'Presentation Skill', 'Kelas ini bertujuan untuk mengasah kemampuan presentasi delegates yang mencakup public speaking dan transfer idea dimana juga mencakup kemampuan membuat presentasi yang menarik namun juga efektif dan efisien.', 'https://user-images.githubusercontent.com/10141928/29752968-f927f8bc-8b91-11e7-8593-13c99ef6c173.png'),
-(5, 'Customer Insight', 'Salah satu tujuan dari customer insight ini adalah dapat menjual sebuah idea dengan lebih mudah, dimana idea tersebut dapat memenuhi insight dari konsumen dengan menyediakan benefit yang ditawarkan. Kelas consumers insight sendiri merupakan kelas yang akan mengajarkan delegates bagaimana caranya menganalisis kebutuhan pasar dan apa yang pasar inginkan. sehingga diharapkan delegates dapat pula belajar dalam menentukan target maupun segmentasi dari idea yang ingin mereka buat.', 'https://user-images.githubusercontent.com/10141928/29752966-f91c7262-8b91-11e7-8f75-44a94a1671e9.png');
+INSERT INTO `kelas_workshop` (`id_workshop`, `nama_kelas`, `deskripsi`, `gambar_logo`, `ruang_kelas`) VALUES
+(1, 'Idea Development', 'Kelas ini bertujuan untuk menantang delegates bagaimana mereka dapat mengembangkan ide-idea yang selama ini mereka miliki agar menjadi suatu karya yang nyata.', 'https://user-images.githubusercontent.com/10141928/29752965-f91a375e-8b91-11e7-9791-1bd78efaa8e0.png', 'D.1.2'),
+(2, 'Content', 'Dalam kelas ini delegates akan diajarkan bagaimana cara mereka mengimplementasikan ide-ide yang mereka miliki ke dalam bentuk tulisan (content) yang efektif dan efisien untuk dapat disampaikan kepada masyarakat luas.', 'https://user-images.githubusercontent.com/10141928/29752967-f924a25c-8b91-11e7-8bc9-e8186a8f4072.png', ''),
+(3, 'Branding', 'Dalam kelas ini delegates akan belajar \'how to sell their idea\', dimana mereka akan belajar langkah-langkah kongkrit agar ide-ide hebat yang mereka miliki dapat terlihat menarik dan meyakinkan dan tentu saja disukai pula oleh orang lain.', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png', ''),
+(4, 'Presentation Skill', 'Kelas ini bertujuan untuk mengasah kemampuan presentasi delegates yang mencakup public speaking dan transfer idea dimana juga mencakup kemampuan membuat presentasi yang menarik namun juga efektif dan efisien.', 'https://user-images.githubusercontent.com/10141928/29752968-f927f8bc-8b91-11e7-8593-13c99ef6c173.png', ''),
+(5, 'Customer Insight', 'Salah satu tujuan dari customer insight ini adalah dapat menjual sebuah idea dengan lebih mudah, dimana idea tersebut dapat memenuhi insight dari konsumen dengan menyediakan benefit yang ditawarkan. Kelas consumers insight sendiri merupakan kelas yang akan mengajarkan delegates bagaimana caranya menganalisis kebutuhan pasar dan apa yang pasar inginkan. sehingga diharapkan delegates dapat pula belajar dalam menentukan target maupun segmentasi dari idea yang ingin mereka buat.', 'https://user-images.githubusercontent.com/10141928/29752966-f91c7262-8b91-11e7-8f75-44a94a1671e9.png', '');
 
 -- --------------------------------------------------------
 
@@ -76,6 +77,20 @@ CREATE TABLE `komunitas` (
   `deskripsi` text NOT NULL,
   `gambar_logo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `komunitas`
+--
+
+INSERT INTO `komunitas` (`id_komunitas`, `nama_komunitas`, `deskripsi`, `gambar_logo`) VALUES
+(1, 'Komunitas Pertama', 'deskripsi komunitas Pertama', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(2, 'Komunitas Kedua', 'Deskripsi Komunitas Kedua', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(3, 'Komunitas Ketiga', 'Deskripsi Komunitas Ketiga', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(4, 'Komunitas Ke 4', 'Deskripsi 4', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(5, 'Komunitas 5', 'deskripsi 5', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(6, 'Komunitas 6', 'deksripsi 6', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(7, 'Komunitas 7', 'deskripsi 7', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png'),
+(8, 'Komunitas 8', 'deskripsi 8', 'https://user-images.githubusercontent.com/10141928/29752964-f91742ba-8b91-11e7-9181-9e9c8a5f2076.png');
 
 -- --------------------------------------------------------
 
@@ -95,7 +110,8 @@ CREATE TABLE `login_attempts` (
 --
 
 INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(7, '127.0.0.1', 'editor@gmail.com', 1503851400);
+(1, '127.0.0.1', 'indrakusuma.udinus@gmail.com', 1504274285),
+(2, '127.0.0.1', 'arji@fls.com', 1504340286);
 
 -- --------------------------------------------------------
 
@@ -130,8 +146,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `id_workshop`, `id_komunitas`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'GT9i.CsAj60vGLcadsTHMu', 1268889823, 1503804845, 1, 'Admin', 'istrator', 'ADMIN', '0', NULL, NULL),
-(2, '127.0.0.1', 'delegates@fls.com', '$2y$08$OVqKkIuMa726HFYpj6xCNuOh/QfCYsgZWLszGQWDYgYLIApw1NmHy', NULL, 'delegates@fls.com', NULL, NULL, NULL, NULL, 1503797772, 1503924376, 1, 'Indra', 'Kusuma', '', '', 1, NULL);
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'GT9i.CsAj60vGLcadsTHMu', 1268889823, 1504274344, 1, 'Admin', 'istrator', 'ADMIN', '0', NULL, NULL),
+(2, '127.0.0.1', 'delegates@fls.com', '$2y$08$OVqKkIuMa726HFYpj6xCNuOh/QfCYsgZWLszGQWDYgYLIApw1NmHy', NULL, 'delegates@fls.com', NULL, NULL, NULL, NULL, 1503797772, 1504340146, 1, 'Indra', 'Kusuma', '', '', NULL, 2),
+(3, '127.0.0.1', 'arji@fls.com', '$2y$08$GlS0ooW.jQAaZUGbidbKquk9YjtzhFe4RZzEgg7Wlr4Phf7VyWhSC', NULL, 'arji@fls.com', NULL, NULL, NULL, NULL, 1504120637, 1504332059, 0, 'Muh. Arji', 'Syarifudin', 'FLS', '0999999', 1, 2),
+(4, '127.0.0.1', 'indrakusuma.udinus@fls.com', '$2y$08$/lg4OYk6kpPjF8fCXHsjbOLQPE9OGB24wyDisaNeprH3hT/lCdHGK', NULL, 'indrakusuma.udinus@fls.com', NULL, NULL, NULL, NULL, 1504274188, 1504340305, 1, 'Indra', 'Kusuma', 'FLS', '089522248642', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -152,7 +170,31 @@ CREATE TABLE `users_groups` (
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (1, 1, 1),
 (2, 1, 2),
-(3, 2, 2);
+(3, 2, 2),
+(4, 3, 2),
+(6, 4, 1),
+(7, 4, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `waktu_buka`
+--
+
+CREATE TABLE `waktu_buka` (
+  `id_buka` int(11) NOT NULL,
+  `is_buka` int(11) NOT NULL DEFAULT '0',
+  `deskripsi` varchar(255) NOT NULL,
+  `update_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `waktu_buka`
+--
+
+INSERT INTO `waktu_buka` (`id_buka`, `is_buka`, `deskripsi`, `update_at`) VALUES
+(1, 0, 'Kelas Workshop', '2017-09-01 13:48:16'),
+(2, 1, 'Vote Komunitas', '2017-09-02 07:47:02');
 
 --
 -- Indexes for dumped tables
@@ -200,6 +242,12 @@ ALTER TABLE `users_groups`
   ADD KEY `fk_users_groups_groups1_idx` (`group_id`);
 
 --
+-- Indexes for table `waktu_buka`
+--
+ALTER TABLE `waktu_buka`
+  ADD PRIMARY KEY (`id_buka`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -217,22 +265,27 @@ ALTER TABLE `kelas_workshop`
 -- AUTO_INCREMENT for table `komunitas`
 --
 ALTER TABLE `komunitas`
-  MODIFY `id_komunitas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_komunitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `users_groups`
 --
 ALTER TABLE `users_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `waktu_buka`
+--
+ALTER TABLE `waktu_buka`
+  MODIFY `id_buka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --

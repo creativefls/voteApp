@@ -1,6 +1,9 @@
 # FLS VoteApp
 Merupakan aplikasi yang digunakan untuk pemilihan kelas dan voting komunitas pada acara Future Leader Summit 2017. Aplikasi ini ditenagai oleh Codeigniter Versi 3.
 
+## Release for V.1.0
+- 2 September 2017 (updated)
+
 ## User Groups
 - Rangers | admin
   - Merupakan Rangers FLS 2017 (PID)
