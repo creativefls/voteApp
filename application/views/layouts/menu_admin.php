@@ -2,7 +2,7 @@
 <div class="sidebar-wrapper">
       <div class="logo">
           <a href="<?=base_url();?>" class="simple-text">
-              Person in Delegates
+              Rangers
           </a>
       </div>
 
@@ -19,8 +19,8 @@
                   <p>Kelas Workshop</p>
               </a>
           </li>
-          <li <?php if($page=="hasil_voting"){echo 'class="active"';}?>>
-              <a href="<?=base_url();?>">
+          <li <?php if($page=="list_komunitas"){echo 'class="active"';}?>>
+              <a href="<?=base_url();?>adminController/list_komunitas">
                   <i class="ti-bar-chart"></i>
                   <p>Hasil Voting</p>
               </a>

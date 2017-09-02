@@ -9,10 +9,9 @@
 				</div>
 				<div class="content">
 					<ul class="list-unstyled team-members">
-
+						<!-- awal list workshop -->
             <?php foreach ($workshop as $data) {
               ?>
-
               <li>
   							<div class="row">
                   <div class="col-xs-3">
@@ -23,7 +22,7 @@
   								<div class="col-xs-5">
   									<?=$data['nama_kelas'];?>
   									<br>
-                      <span class="text-success"><small><i class="fa fa-check-circle"></i><?=$data['ruang_kelas'];?></small></span>
+                      <span class="text-success"><small><i class="ti-location-pin"></i> <?=$data['ruang_kelas'];?></small></span>
                   </div>
 
       								<div class="col-xs-3 text-right">
@@ -34,8 +33,7 @@
 
               <?php
             } ?>
-
-
+						<!-- akhir dari list workshop -->
 					</ul>
 				</div>
 			</div>

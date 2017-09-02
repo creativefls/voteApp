@@ -61,7 +61,17 @@ class MainModel extends CI_Model {
 
     return $this->db->get()->row_array();
   }
-  
+
+  // for list komunitas
+  function getListKomunitas()
+  {
+    $query = $this->db->query('SELECT count(a.id) as jumlah, a.id_komunitas, b.nama_komunitas, b.gambar_logo, b.deskripsi
+                                FROM users as a, komunitas as b
+                                WHERE a.id_komunitas = b.id_komunitas
+                                GROUP BY b.nama_komunitas
+                                ORDER BY jumlah DESC');
+    return $query->result_array();
+  }
 }
 
 /* End of file MainModel.php */

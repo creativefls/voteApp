@@ -87,4 +87,17 @@ class AdminController extends CI_Controller{
 		$this->load->view('main', $data);
   }
 
+  // ***************************************************************
+  function list_komunitas()
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['komunitas']  = $this->MainModel->getListKomunitas();
+
+		$data['title'] 			= 'Hasil Vote Komunitas';
+		$data['content'] 		= 'contents/admin/komunitas_list';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
 }
