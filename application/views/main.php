@@ -14,7 +14,13 @@
 	<title><?=$title;?> | #DaretoCreate Future Leader Summit 2017</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width" />
+
+	<meta name="author" content="Future Leader Summit">
+	 <meta name="keyword" content="fls, future leader summit, fls 2017, 2017, delegates 2017, calon delegates, delegates fls, nusantara muda, fls blog, fls artikel">
+	 <meta name="description" content="Merupakan aplikasi yang digunakan untuk pemilihan kelas workshop dan voting komunitas pada acara Future Leader Summit 2017.">
+	 <meta property="og:url" content="<?=base_url();?>" />
+    <meta property="og:image" content="https://user-images.githubusercontent.com/10141928/27992993-bce8de68-64ca-11e7-86d8-50a489d6b744.png" />
 
 
     <!-- Bootstrap core CSS     -->
