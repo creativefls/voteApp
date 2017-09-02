@@ -5,7 +5,7 @@
 		<div class="col-lg-4 col-md-4 col-sm-6">
 			<div class="card">
 				<div class="header">
-					<h5 class="title"><i class="ti-cup"></i> Vote Komunitas</h5><br>
+					<h5 class="title">Hasil Vote Komunitas</h5><br>
 				</div>
         <div class="content table-responsive table-full-width">
 					<table class="table table-striped">

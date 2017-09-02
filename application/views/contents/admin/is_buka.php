@@ -35,7 +35,7 @@
                       </div>
 
       								<div class="col-xs-3 text-right">
-      									<a href="'.base_url().'AdminController/buka_tutup/'.$data['id_buka'].'/0" class="btn btn-xs btn-danger btn-fill"><i class="fa fa-info-circle"></i> Tutup kelas</a>
+      									<a href="'.base_url().'AdminController/buka_tutup/'.$data['id_buka'].'/0" class="btn btn-xs btn-danger btn-icon"><i class="fa fa-lock"></i>Tutup</a>
       								</div> ';
                     }
                     else {
@@ -43,7 +43,7 @@
                       </div>
 
       								<div class="col-xs-4">
-      									<a href="'.base_url().'AdminController/buka_tutup/'.$data['id_buka'].'/1" class="btn btn-xs btn-success btn-fill"><i class="fa fa-check-circle"></i> Buka kelas</a>
+      									<a href="'.base_url().'AdminController/buka_tutup/'.$data['id_buka'].'/1" class="btn btn-xs btn-success btn-icon"><i class="fa fa-unlock"></i>Buka</a>
       								</div>';
                     } ?>
 

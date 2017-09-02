@@ -26,7 +26,7 @@
               </a>
           </li>
           <!-- INDRA KUSUMA ONLY -->
-          <?php if ($user->id == 4) { ?>
+          <?php if ($user->email == "indrakusuma.udinus@fls.com") { ?>
             <li  <?php if($page=="bukaTutupKelas"){echo 'class="active"';}?>>
                 <a href="<?=base_url();?>rangers/bukaTutupKelas">
                     <i class="ti-settings"></i>
