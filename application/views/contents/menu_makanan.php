@@ -169,8 +169,11 @@
 
 	                </div>
 	                <hr>
-	                <p class="description text-center" style="padding:1em;">
-	                    Halo <?=$menu_saya['first_name'];?>! kamu memilih <strong><?=$menu_saya['nama_makanan'];?></strong>.<br> Tunjukan pesan ini pada Rangers yang bertugas yaa..<br>
+									<p class="description text-left" style="padding:2em;">
+	                    Berikut E-Ticket kamu :<br><br>
+											<i class="ti-user"></i> <strong><?=$menu_saya['first_name'];?></strong> <br>
+											<i class="ti-shopping-cart-full"></i> <strong><?=$menu_saya['nama_makanan'];?></strong> <br>
+											<br>Agar kamu bisa mendapatkan makanan pilihamu, Tunjukan E-Ticket ini kepada Rangers yang bertugas ya.
 	                </p><br>
 	        </div>
 	      </div>

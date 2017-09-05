@@ -67,9 +67,12 @@
 
                       </div>
                       <hr>
-                      <p class="description text-center" style="padding:1em;">
-                          Halo <?=$komunitas['first_name'];?>! kamu telah melakukan voting pada komunitas  <strong><?=$komunitas['nama_komunitas'];?></strong>.<br> Terima kasih telah berpartisipasi Young Leaders!<br>
-                      </p><br>
+                      <p class="description text-left" style="padding:2em;">
+    	                    Berikut Hasil pilihanmu :<br><br>
+    											<i class="ti-user"></i> <strong><?=$komunitas['first_name'];?></strong> <br>
+    											<i class="ti-medall"></i> <strong><?=$komunitas['nama_komunitas'];?></strong> <br>
+    											<br><i class="fa fa-heart"></i> Terima kasih telah melakukan voting
+    	                </p><br>
               </div>
             </div>
             <?php

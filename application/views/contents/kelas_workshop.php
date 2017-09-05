@@ -239,14 +239,17 @@
 	                <div class="author">
 	                  <img class="avatar border-gray" src="<?=$kelas_saya['gambar_logo'];?>" alt="FLS Logo">
 	                  <h4 class="title"><?=$kelas_saya['nama_kelas'];?><br>
-	                    <small><?=$kelas_saya['email'];?></small>
+	                    <small><?=$kelas_saya['username'];?></small>
 	                  </h4>
 
 	                </div>
 	                <hr>
-	                <p class="description text-center" style="padding:1em;">
-	                    Halo <?=$kelas_saya['first_name'];?>! kamu terdaftar pada kelas pada <strong><?=$kelas_saya['nama_kelas'];?></strong>.<br> Tunjukan pesan ini pada PID yang bertugas yaa.<br>
-	                    Oh iya, ruangan kamu ada di <strong><?=$kelas_saya['ruang_kelas'];?></strong>
+	                <p class="description text-left" style="padding:2em;">
+	                    Halo <?=$kelas_saya['first_name'];?>! Berikut E-Ticket kamu :<br><br>
+											<i class="ti-user"></i> <strong><?=$kelas_saya['first_name'];?></strong> <br>
+											<i class="ti-agenda"></i> <strong><?=$kelas_saya['nama_kelas'];?></strong> <br>
+											<i class="ti-location-pin"></i> <strong><?=$kelas_saya['ruang_kelas'];?></strong><br>
+											<br>Agar kamu diperbolehkan masuk ke ruangan, Tunjukan E-Ticket ini kepada Rangers yang bertugas ya.
 	                </p><br>
 	        </div>
 	      </div>
