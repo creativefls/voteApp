@@ -19,137 +19,123 @@
 				// informasi tidak bisa dirubah
 		    $this->load->view('contents/info_tidak_bisa_dirubah');
 			  ?>
-	      <!-- getList Data makanan -->
-				<!-- SOTO AYAM -->
-	      <div class="col-lg-4 col-md-4 col-sm-6">
-	        <div class="card">
-	          <div class="content">
-	            <div class="row">
-	              <div class="col-xs-4">
-	                <img class="img-voting" src="https://user-images.githubusercontent.com/10141928/29752965-f91a375e-8b91-11e7-9791-1bd78efaa8e0.png" alt="Idea Development">
-	              </div>
-	              <div class="col-xs-8">
-	                <div class="numbers">
-	                  <p>Pilihan #1</p>
-	                  Soto Ayam</div>
-	              </div>
-	            </div>
-	            <div class="footer">
-	              <hr />
-	              <div class="stats">
-	                <div class="col-xs-12">
-	                  <div class="col-xs-6">
-	                    <i class="ti-ruler-pencil"></i> <strong> <?=$soto_ayam['jumlah'];?>/100</strong>
-	                  </div>
-	                  <?php if ($soto_ayam['jumlah'] >= 100) {
-	                    ?>
-	                    <!-- kelas penuh -->
-	                    <div class="col-xs-6">
-	                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Stok Habis</a>
-	                    </div>
-	                    <?php
-	                  } else {
-	                    ?>
-	                    <!-- kelas tersedia -->
-	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-menu/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
-	                      </div>
-	                    <?php
-	                  }?>
 
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-				<!-- Nasi Ayam -->
+				<!-- nasi ayam -->
 				<div class="col-lg-4 col-md-4 col-sm-6">
-	        <div class="card">
-	          <div class="content">
-	            <div class="row">
-	              <div class="col-xs-4">
-	                <img class="img-voting" src="https://user-images.githubusercontent.com/10141928/29752965-f91a375e-8b91-11e7-9791-1bd78efaa8e0.png" alt="Idea Development">
-	              </div>
-	              <div class="col-xs-8">
-	                <div class="numbers">
-	                  <p>Pilihan #2</p>
-	                  Nasi Ayam</div>
-	              </div>
+	        <div class="card card-user">
+	            <div class="image">
+	                <img src="https://user-images.githubusercontent.com/10141928/30072851-db2b383c-9295-11e7-894a-173ff85e305d.png" alt="FLS header logo">
 	            </div>
-	            <div class="footer">
-	              <hr />
-	              <div class="stats">
-	                <div class="col-xs-12">
-	                  <div class="col-xs-6">
-	                    <i class="ti-ruler-pencil"></i> <strong> <?=$soto_ayam['jumlah'];?>/100</strong>
-	                  </div>
-	                  <?php if ($nasi_ayam['jumlah'] >= 100) {
-	                    ?>
-	                    <!-- kelas penuh -->
-	                    <div class="col-xs-6">
-	                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Stok Habis</a>
-	                    </div>
-	                    <?php
-	                  } else {
-	                    ?>
-	                    <!-- kelas tersedia -->
-	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-menu/1" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
-	                      </div>
-	                    <?php
-	                  }?>
-
-	                </div>
-	              </div>
-	            </div>
-	          </div>
+							<!-- judul makanan & sisa porsi -->
+									<p class="description" style="padding-left:2em;">
+	                    <i class="ti-bookmark"></i> <strong>Nasi Ayam Semarang</strong>
+											<br> <i class="ti-shopping-cart"></i> Sisa <strong><?=100-$nasi_ayam['jumlah'];?> Porsi</strong> <br>
+	                </p>
+									<!-- selengkapnya dan order -->
+									<div class="footer">
+			              <hr />
+			              <div class="stats">
+			                  <div class="col-xs-6">
+			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                  </div>
+			                  <?php if ($nasi_ayam['jumlah'] >= 100) {
+			                    ?>
+			                    <!-- Stock habis -->
+			                    <div class="col-xs-6">
+			                      <a href="#" class="btn btn-danger btn-sm btn-fill"><i class="ti-close"></i>Stok Habis</a>
+			                    </div>
+			                    <?php
+			                  } else {
+			                    ?>
+			                    <!-- kelas tersedia -->
+			                      <div class="col-xs-6">
+			                        <a href="<?=base_url();?>members/pilih-menu/1" class="btn btn-success btn-sm btn-fill"><i class="ti-shopping-cart-full"></i> ORDER</a>
+			                      </div>
+			                    <?php
+			                  }?>
+			              </div>
+			            </div>
 	        </div>
 	      </div>
-				<!-- Tahu Gimbal -->
+				<!-- end nasi ayam -->
+
+				<!-- soto ayam -->
 				<div class="col-lg-4 col-md-4 col-sm-6">
-	        <div class="card">
-	          <div class="content">
-	            <div class="row">
-	              <div class="col-xs-4">
-	                <img class="img-voting" src="https://user-images.githubusercontent.com/10141928/29752965-f91a375e-8b91-11e7-9791-1bd78efaa8e0.png" alt="Idea Development">
-	              </div>
-	              <div class="col-xs-8">
-	                <div class="numbers">
-	                  <p>Pilihan #3</p>
-	                  Tahu Gimbal</div>
-	              </div>
+	        <div class="card card-user">
+	            <div class="image">
+	                <img src="https://user-images.githubusercontent.com/10141928/30072849-d789a4fc-9295-11e7-8538-26958c51507a.png" alt="FLS header logo">
 	            </div>
-	            <div class="footer">
-	              <hr />
-	              <div class="stats">
-	                <div class="col-xs-12">
-	                  <div class="col-xs-6">
-	                    <i class="ti-ruler-pencil"></i> <strong> <?=$soto_ayam['jumlah'];?>/100</strong>
-	                  </div>
-	                  <?php if ($tahu_gimbal['jumlah'] >= 100) {
-	                    ?>
-	                    <!-- kelas penuh -->
-	                    <div class="col-xs-6">
-	                      <a href="#" class="btn btn-danger btn-xs btn-fill btn-wd btn-block">Stok Habis</a>
-	                    </div>
-	                    <?php
-	                  } else {
-	                    ?>
-	                    <!-- kelas tersedia -->
-	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-menu/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
-	                      </div>
-	                    <?php
-	                  }?>
-
-	                </div>
-	              </div>
-	            </div>
-	          </div>
+							<!-- judul makanan & sisa porsi -->
+									<p class="description" style="padding-left:2em;">
+	                    <i class="ti-bookmark"></i> <strong>Soto Ayam Semarang</strong>
+											<br> <i class="ti-shopping-cart"></i> Sisa <strong><?=100-$soto_ayam['jumlah'];?> Porsi</strong> <br>
+	                </p>
+									<!-- selengkapnya dan order -->
+									<div class="footer">
+			              <hr />
+			              <div class="stats">
+			                  <div class="col-xs-6">
+			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                  </div>
+			                  <?php if ($soto_ayam['jumlah'] >= 100) {
+			                    ?>
+			                    <!-- Stock habis -->
+			                    <div class="col-xs-6">
+			                      <a href="#" class="btn btn-danger btn-sm btn-fill"><i class="ti-close"></i>Stok Habis</a>
+			                    </div>
+			                    <?php
+			                  } else {
+			                    ?>
+			                    <!-- kelas tersedia -->
+			                      <div class="col-xs-6">
+			                        <a href="<?=base_url();?>members/pilih-menu/2" class="btn btn-success btn-sm btn-fill"><i class="ti-shopping-cart-full"></i> ORDER</a>
+			                      </div>
+			                    <?php
+			                  }?>
+			              </div>
+			            </div>
 	        </div>
 	      </div>
-				<!-- end of data makanan -->
+				<!-- end soto ayam -->
+
+	      <!-- tahu gimbal -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+	        <div class="card card-user">
+	            <div class="image">
+	                <img src="https://user-images.githubusercontent.com/10141928/30072846-d45d9d2e-9295-11e7-9558-2abaeb0ac428.png" alt="FLS header logo">
+	            </div>
+							<!-- judul makanan & sisa porsi -->
+									<p class="description" style="padding-left:2em;">
+	                    <i class="ti-bookmark"></i> <strong>Tahu Gimbal Semarang</strong>
+											<br> <i class="ti-shopping-cart"></i> Sisa <strong><?=100-$tahu_gimbal['jumlah'];?> Porsi</strong> <br>
+	                </p>
+									<!-- selengkapnya dan order -->
+									<div class="footer">
+			              <hr />
+			              <div class="stats">
+			                  <div class="col-xs-6">
+			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                  </div>
+			                  <?php if ($tahu_gimbal['jumlah'] >= 100) {
+			                    ?>
+			                    <!-- Stock habis -->
+			                    <div class="col-xs-6">
+			                      <a href="#" class="btn btn-danger btn-sm btn-fill"><i class="ti-close"></i>Stok Habis</a>
+			                    </div>
+			                    <?php
+			                  } else {
+			                    ?>
+			                    <!-- kelas tersedia -->
+			                      <div class="col-xs-6">
+			                        <a href="<?=base_url();?>members/pilih-menu/3" class="btn btn-success btn-sm btn-fill"><i class="ti-shopping-cart-full"></i> ORDER</a>
+			                      </div>
+			                    <?php
+			                  }?>
+			              </div>
+			            </div>
+	        </div>
+	      </div>
+				<!-- end of tahu gimbal -->
 	      <?php
 			}
       // jika sudah memilih makanan
@@ -159,10 +145,10 @@
 	      <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
 	        <div class="card card-user">
 	            <div class="image">
-	                <img src="https://user-images.githubusercontent.com/10141928/29747006-4ddf9562-8b16-11e7-8c67-6046135e827d.png" alt="FLS header logo">
+	                <img src="<?=$menu_saya['foto_makanan'];?>" alt="FLS header logo">
 	            </div>
 	                <div class="author">
-	                  <img class="avatar border-gray" src="<?=$menu_saya['foto_makanan'];?>" alt="<?=$menu_saya['nama_makanan'];?>">
+	                  <img class="avatar border-gray" src="https://user-images.githubusercontent.com/10141928/29747027-e5da50a0-8b16-11e7-9a25-73e3dfa65363.png" alt="<?=$menu_saya['nama_makanan'];?>">
 	                  <h4 class="title"><?=$menu_saya['nama_makanan'];?><br>
 	                    <small><?=$menu_saya['email'];?></small>
 	                  </h4>

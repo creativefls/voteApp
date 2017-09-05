@@ -97,9 +97,9 @@ class MemberController extends CI_Controller{
     // kelas dibuka ? 1 untuk kelas_workshop | 2 untuk vote kelas
     $data['is_buka']    = $this->MainModel->getRowDataWhere('waktu_buka','is_buka as hasil','id_buka = 3');
     //cek ketersediaan kelas
-    $data['nasi_ayam']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
-    $data['soto_ayam']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 2');
-    $data['tahu_gimbal'] = $this->MainModel->countObject('users','id_workshop','id_workshop = 3');
+    $data['nasi_ayam']   = $this->MainModel->countObject('users','id_makan','id_makan = 1');
+    $data['soto_ayam']   = $this->MainModel->countObject('users','id_makan','id_makan = 2');
+    $data['tahu_gimbal'] = $this->MainModel->countObject('users','id_makan','id_makan = 3');
 
 		$data['title'] 			= 'Menu Makan';
 		$data['content'] 		= 'contents/menu_makanan';
