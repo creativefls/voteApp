@@ -50,12 +50,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'MainController';
+// member ***********************************************
 $route['members'] = 'MemberController';
+$route['members/pilih-workshop/(:num)'] = 'MemberController/pilih_kelas/$1';
 $route['members/kelas_workshop'] = 'MemberController/kelas_workshop';
+// vote komunitas
+$route['members/vote-komunitas/(:num)'] = 'MemberController/vote/$1';
 $route['members/voting_komunitas'] = 'MemberController/voting_komunitas';
-$route['members/informasi'] = 'MemberController/informasi';
+// pilih makanan
+$route['members/pilih-menu/(:num)'] = 'MemberController/pilih_makanan/$1';
 $route['members/menu_makan'] = 'MemberController/menu_makan';
-// admin
+// blog member
+$route['members/informasi'] = 'MemberController/informasi';
+
+// admin ***********************************************
 $route['rangers/bukaTutupKelas'] = 'AdminController/bukaTutupKelas';
 $route['rangers'] = 'AdminController';
 $route['404_override'] = 'MainController/eror404';

@@ -52,7 +52,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>MemberController/pilih_makanan/<?=$user->id;?>/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
+	                        <a href="<?=base_url();?>members/pilih-menu/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -95,7 +95,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>MemberController/pilih_makanan/<?=$user->id;?>/1" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
+	                        <a href="<?=base_url();?>members/pilih-menu/1" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -138,7 +138,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>MemberController/pilih_makanan/<?=$user->id;?>/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
+	                        <a href="<?=base_url();?>members/pilih-menu/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Order</a>
 	                      </div>
 	                    <?php
 	                  }?>

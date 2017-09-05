@@ -39,7 +39,7 @@
                               <div class="row">
                                 <div class="text-center">
                                     <div class="col-xs-12">
-                                        <a href="<?=base_url();?>MemberController/vote/<?=$user->id;?>/<?=$data['id_komunitas'];?>" class="btn btn-primary btn-fill btn-sm btn-block"><i class="fa fa-check-circle"></i>Vote <?=$data['nama_komunitas'];?></a>
+                                        <a href="<?=base_url();?>members/vote-komunitas/<?=$data['id_komunitas'];?>" class="btn btn-primary btn-fill btn-sm btn-block"><i class="fa fa-check-circle"></i>Vote <?=$data['nama_komunitas'];?></a>
                                     </div>
                                 </div>
                               </div>

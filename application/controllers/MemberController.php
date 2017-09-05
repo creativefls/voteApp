@@ -48,8 +48,9 @@ class MemberController extends CI_Controller{
   }
 
   // pilih kelas
-  function pilih_kelas($user_id, $id_workshop)
+  function pilih_kelas($id_workshop = '')
   {
+    $user_id = $this->ion_auth->get_user_id();
     // cek apakah admin ? kalau admin gak boleh isis
     if ($this->ion_auth->is_admin()) {
       redirect('MainController');
@@ -106,8 +107,9 @@ class MemberController extends CI_Controller{
 		$this->load->view('main', $data);
   }
 
-  function pilih_makanan($user_id, $id_makan)
+  function pilih_makanan($id_makan = '')
   {
+    $user_id = $this->ion_auth->get_user_id();
     // check apakah admin ?
     if ($this->ion_auth->is_admin()) {
       redirect('MainController');
@@ -151,14 +153,15 @@ class MemberController extends CI_Controller{
     // kelas dibuka ? 1 untuk kelas_workshop | 2 untuk vote kelas
     $data['is_buka']    = $this->MainModel->getRowDataWhere('waktu_buka','is_buka as hasil','id_buka = 2');
 
-		$data['title'] 			= 'Voting Komunitas';
+		$data['title'] 			= 'Komunitas';
 		$data['content'] 		= 'contents/vote_organisasi';
 		// load file main
 		$this->load->view('main', $data);
   }
 
-  function vote($user_id, $id_komunitas)
+  function vote($id_komunitas = '')
   {
+    $user_id = $this->ion_auth->get_user_id();
     // cek admin --> jika iya tolak
     if ($this->ion_auth->is_admin()) {
       redirect('MainController');
