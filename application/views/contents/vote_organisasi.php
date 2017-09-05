@@ -67,8 +67,8 @@
 
                       </div>
                       <hr>
-                      <p class="description text-left" style="padding:2em;">
-    	                    Berikut Hasil pilihanmu :<br><br>
+                      <p class="description text-left" style="padding: 0em 1em 0em 2em;">
+    	                    Berikut Hasil pilihanmu,<br><br>
     											<i class="ti-user"></i> <strong><?=$komunitas['first_name'];?></strong> <br>
     											<i class="ti-medall"></i> <strong><?=$komunitas['nama_komunitas'];?></strong> <br>
     											<br><i class="fa fa-heart"></i> Terima kasih telah melakukan voting
