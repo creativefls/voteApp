@@ -1,6 +1,16 @@
 # FLS VoteApp
 Merupakan aplikasi yang digunakan untuk pemilihan kelas dan voting komunitas pada acara Future Leader Summit 2017. Aplikasi ini ditenagai oleh Codeigniter Versi 3.
 
+## CHANGELOG
+### Release for V.1.1
+- Penambahan fitur pilih makanan untuk `delegates`
+- Penambahan `bukaTutupKelas` menu makanan untuk `admin`
+- penulisan ulang URL MainController => `members` untuk fungsi vote, pilih-workshop dan pilih-menu
+- Memperbaiki Tampilan E-Ticket `delegates`
+- Penambahan `Pilih Makanan` di dashboard `delegates`
+- Perbaikan bug pada issue #17 
+
+***
 ## Release for V.1.0
 - 2 September 2017 (updated)
 
