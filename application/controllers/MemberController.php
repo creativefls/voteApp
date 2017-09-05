@@ -50,6 +50,10 @@ class MemberController extends CI_Controller{
   // pilih kelas
   function pilih_kelas($user_id, $id_workshop)
   {
+    // cek apakah admin ? kalau admin gak boleh isis
+    if ($this->ion_auth->is_admin()) {
+      redirect('MainController');
+    }
     // cek dulu apakah user udah memilih kelas.. kalau udah TOLAK AJA!!!!
     $isFill = $this->MainModel->getRowDataWhere('users','id_workshop as hasil','id = '.$user_id.'');
     // cek hasilnya..
@@ -99,6 +103,10 @@ class MemberController extends CI_Controller{
 
   function vote($user_id, $id_komunitas)
   {
+    // cek admin --> jika iya tolak
+    if ($this->ion_auth->is_admin()) {
+      redirect('MainController');
+    }
     // check apakah user sudah voting
     $isFill = $this->MainModel->getRowDataWhere('users','id_komunitas as hasil','id = '.$user_id.'');
     // cek hasilnya..
