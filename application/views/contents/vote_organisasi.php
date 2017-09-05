@@ -2,6 +2,8 @@
     <div class="row">
 
       <?php
+
+
   			$data['pesan']	= $this->session->flashdata('pesan');
   	    if (isset($data['pesan'])) {
   				$this->load->view('contents/notifikasi', $data);
@@ -15,6 +17,8 @@
         }
         else {
           if ($user->id_komunitas == NULL) {
+            // informasi tidak bisa dirubah
+            $this->load->view('contents/info_tidak_bisa_dirubah');
             foreach ($list_organisasi as $data) {
               ?>
               <div class="col-lg-4 col-md-4 col-sm-6">
@@ -65,7 +69,6 @@
                       <hr>
                       <p class="description text-center" style="padding:1em;">
                           Halo <?=$komunitas['first_name'];?>! kamu telah melakukan voting pada komunitas  <strong><?=$komunitas['nama_komunitas'];?></strong>.<br> Terima kasih telah berpartisipasi Young Leaders!<br>
-                          <br>Salam dari Admin :D
                       </p><br>
               </div>
             </div>

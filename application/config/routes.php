@@ -54,6 +54,7 @@ $route['members'] = 'MemberController';
 $route['members/kelas_workshop'] = 'MemberController/kelas_workshop';
 $route['members/voting_komunitas'] = 'MemberController/voting_komunitas';
 $route['members/informasi'] = 'MemberController/informasi';
+$route['members/menu_makan'] = 'MemberController/menu_makan';
 // admin
 $route['rangers/bukaTutupKelas'] = 'AdminController/bukaTutupKelas';
 $route['rangers'] = 'AdminController';

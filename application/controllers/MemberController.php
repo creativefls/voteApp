@@ -88,6 +88,62 @@ class MemberController extends CI_Controller{
     }
   }
 
+  // ***************************************************************
+  function menu_makan()
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    $data['list_menu']  = $this->MainModel->getListData('menu_makan',null,null,null);
+    // kelas dibuka ? 1 untuk kelas_workshop | 2 untuk vote kelas
+    $data['is_buka']    = $this->MainModel->getRowDataWhere('waktu_buka','is_buka as hasil','id_buka = 3');
+    //cek ketersediaan kelas
+    $data['nasi_ayam']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
+    $data['soto_ayam']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 2');
+    $data['tahu_gimbal'] = $this->MainModel->countObject('users','id_workshop','id_workshop = 3');
+
+		$data['title'] 			= 'Menu Makan';
+		$data['content'] 		= 'contents/menu_makanan';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
+  function pilih_makanan($user_id, $id_makan)
+  {
+    // check apakah admin ?
+    if ($this->ion_auth->is_admin()) {
+      redirect('MainController');
+    }
+
+    // cek dulu apakah user udah memilih makanan.. kalau udah TOLAK AJA!!!!
+    $isFill = $this->MainModel->getRowDataWhere('users','id_makan as hasil','id = '.$user_id.'');
+    // cek hasilnya..
+    if ($isFill['hasil'] != NULL) {
+      // jika hasilnya tidak sama dengan NULL maka..
+      $this->session->set_flashdata('pesan','Mohon maaf Young Leader, kamu sudah memilih makanan. Berikut makanan yang kamu pilih..');
+      redirect('members/menu_makan');
+    }
+    else {
+      // cek kuota kelas terlebih dulu
+      $kuota = $this->MainModel->countObject('users','id_makan','id_makan = '.$id_makan.'');
+      $nilai = $kuota['jumlah'];
+
+      if ($nilai >= 100) {
+        $this->session->set_flashdata('pesan','Maaf Young Leaders!, Kamu kurang cepet.. :( <br> Pilih menu lain ya..');
+        redirect('members/menu_makan');
+      }
+      else if($nilai >= 0 && $nilai <= 99){
+        $data = array(
+          'id_makan' => $id_makan
+        );
+        $this->MainModel->updateData('users', $data, 'id = '.$user_id.'');
+        // periksa apakah terjadi update didatabase
+        if ($this->db->affected_rows()) {
+          $this->session->set_flashdata('pesan','Yey! Kamu berhasil memilih menu makan');
+          redirect('members/menu_makan');
+        }
+      }
+    }
+  }
+
   function voting_komunitas()
   {
     $data['user']				     = $this->ion_auth->user()->row();

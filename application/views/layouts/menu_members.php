@@ -25,6 +25,12 @@
                   <p>Voting Komunitas</p>
               </a>
           </li>
+          <li <?php if($page=="menu_makan"){echo 'class="active"';}?>>
+              <a href="<?=base_url();?>members/menu_makan">
+                  <i class="ti-shopping-cart"></i>
+                  <p>Menu Makan</p>
+              </a>
+          </li>
           <li <?php if($page=="informasi"){echo 'class="active"';}?>>
               <a href="<?=base_url();?>members/informasi">
                   <i class="ti-announcement"></i>

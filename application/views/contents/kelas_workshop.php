@@ -2,11 +2,12 @@
 	<div class="row">
 
 		<?php
+
 			$data['pesan']	= $this->session->flashdata('pesan');
 	    if (isset($data['pesan'])) {
 				$this->load->view('contents/notifikasi', $data);
 	    } ?>
-			
+
 		<!-- informasi kelas dibuka -->
 		<?php if ($is_buka['hasil'] == 0) {
 			// jika kelas belum dibuka
@@ -14,6 +15,8 @@
 		}
 		else {
 			if ($user->id_workshop == NULL) {
+				// informasi tidak bisa dirubah
+				$this->load->view('contents/info_tidak_bisa_dirubah');
 			  ?>
 	      <!-- getList Data Kelas Workshop -->
 	      <div class="col-lg-4 col-md-4 col-sm-6">
@@ -244,7 +247,6 @@
 	                <p class="description text-center" style="padding:1em;">
 	                    Halo <?=$kelas_saya['first_name'];?>! kamu terdaftar pada kelas pada <strong><?=$kelas_saya['nama_kelas'];?></strong>.<br> Tunjukan pesan ini pada PID yang bertugas yaa.<br>
 	                    Oh iya, ruangan kamu ada di <strong><?=$kelas_saya['ruang_kelas'];?></strong>
-	                    <br>Salam dari Admin :D
 	                </p><br>
 	        </div>
 	      </div>
