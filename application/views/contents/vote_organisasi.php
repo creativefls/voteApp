@@ -27,7 +27,7 @@
                           <div class="row">
                               <div class="col-xs-12">
                                   <div class="numbers" style="text-align:center">
-                                      <p>Komunitas</p>
+                                      <p>Komunitas #<?=$data['id_komunitas'];?></p>
                                       <?=$data['nama_komunitas'];?>
                                   </div>
                               </div>
