@@ -62,6 +62,7 @@ $route['members/pilih-menu/(:num)'] = 'MemberController/pilih_makanan/$1';
 $route['members/menu_makan'] = 'MemberController/menu_makan';
 // blog member
 $route['members/informasi'] = 'MemberController/informasi';
+$route['members/detail/komunitas/(:num)'] = 'MemberController/detail_komunitas/$1';
 
 // admin ***********************************************
 $route['rangers/bukaTutupKelas'] = 'AdminController/bukaTutupKelas';

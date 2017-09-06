@@ -38,8 +38,10 @@
                               <hr />
                               <div class="row">
                                 <div class="text-center">
-                                    <div class="col-xs-12">
-                                        <a href="<?=base_url();?>members/vote-komunitas/<?=$data['id_komunitas'];?>" class="btn btn-primary btn-fill btn-sm btn-block"><i class="fa fa-check-circle"></i>Vote <?=$data['nama_komunitas'];?></a>
+                                  <div class="col-xs-12">
+                                       <a href="<?=base_url();?>members/detail/komunitas/<?=$data['id_komunitas'];?>" class="btn btn-info btn-sm"><i class="ti-search"></i> Selengkapnya</a>
+
+                                        <a href="<?=base_url();?>members/vote-komunitas/<?=$data['id_komunitas'];?>" class="btn btn-success btn-sm btn-fill"><i class="ti-heart"></i> VOTE</a>
                                     </div>
                                 </div>
                               </div>

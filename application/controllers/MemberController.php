@@ -13,9 +13,11 @@ class MemberController extends CI_Controller{
     // next step...
     if (!$this->ion_auth->in_group(2))
 		{
-			redirect('MainController');
-			// echo "admin";
+      redirect('MainController');
 		}
+    else if ($this->ion_auth->is_admin()) {
+      redirect('MainController');
+    }
   }
 
   public function index()
@@ -195,6 +197,7 @@ class MemberController extends CI_Controller{
     }
   }
 
+  // ***********************************************************************
   function informasi()
   {
     $data['user']				= $this->ion_auth->user()->row();
@@ -203,6 +206,18 @@ class MemberController extends CI_Controller{
 		$data['title'] 			= 'Informasi';
 		$data['content'] 		= 'contents/informasi';
 		// load file main
+		$this->load->view('main', $data);
+  }
+
+  // Detail informasi
+  function detail_komunitas($key = '')
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    
+    $data['info'] = $this->MainModel->getRowDataWhere('komunitas', '*', 'id_komunitas = '.$key.'');
+    $data['title'] 			= 'Informasi';
+		$data['content'] 		= 'contents/detail/d_komunitas';
+    // load file main
 		$this->load->view('main', $data);
   }
 

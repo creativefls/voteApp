@@ -50,7 +50,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-workshop/1" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Gabung</a>
+	                        <a href="<?=base_url();?>members/pilih-workshop/1" class="btn btn-success btn-xs btn-fill btn-wd btn-block"><i class="ti-plus"></i> GABUNG</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -92,7 +92,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-workshop/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Gabung</a>
+	                        <a href="<?=base_url();?>members/pilih-workshop/2" class="btn btn-success btn-xs btn-fill btn-wd btn-block"><i class="ti-plus"></i> GABUNG</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -134,7 +134,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-workshop/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Gabung</a>
+	                        <a href="<?=base_url();?>members/pilih-workshop/3" class="btn btn-success btn-xs btn-fill btn-wd btn-block"><i class="ti-plus"></i> GABUNG</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -175,7 +175,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-workshop/4" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Gabung</a>
+	                        <a href="<?=base_url();?>members/pilih-workshop/4" class="btn btn-success btn-xs btn-fill btn-wd btn-block"><i class="ti-plus"></i> GABUNG</a>
 	                      </div>
 	                    <?php
 	                  }?>
@@ -216,7 +216,7 @@
 	                    ?>
 	                    <!-- kelas tersedia -->
 	                      <div class="col-xs-6">
-	                        <a href="<?=base_url();?>members/pilih-workshop/5" class="btn btn-success btn-xs btn-fill btn-wd btn-block">Gabung</a>
+	                        <a href="<?=base_url();?>members/pilih-workshop/5" class="btn btn-success btn-xs btn-fill btn-wd btn-block"><i class="ti-plus"></i> GABUNG</a>
 	                      </div>
 	                    <?php
 	                  }?>
