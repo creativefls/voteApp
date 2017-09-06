@@ -38,25 +38,25 @@ class MainController extends CI_Controller {
 	{
 		$this->load->view('errors/404');
 	}
-
-	public function tambah_user()
-	{
-			$user = $this->MainModel->getListData('delegates',null,null,null);
-
-			foreach ($user as $data) {
-				$email = $data['email'];
-				$password = 'delegates';
-				$identity = $data['username'];
-				$additional_data = array(
-					'first_name' => $data['nama'],
-					'last_name'  => 'FLS',
-					'company'    => '2017',
-					'phone'      => '0',
-				);
-				// insert data
-				$this->ion_auth->register($identity, $password, $email, $additional_data);
-			}
-	}
+	//
+	// public function tambah_user()
+	// {
+	// 		$user = $this->MainModel->getListData('delegates',null,null,null);
+	//
+	// 		foreach ($user as $data) {
+	// 			$email = $data['email'];
+	// 			$password = 'delegates';
+	// 			$identity = $data['username'];
+	// 			$additional_data = array(
+	// 				'first_name' => $data['nama'],
+	// 				'last_name'  => 'FLS',
+	// 				'company'    => '2017',
+	// 				'phone'      => '0',
+	// 			);
+	// 			// insert data
+	// 			$this->ion_auth->register($identity, $password, $email, $additional_data);
+	// 		}
+	// }
 
 
 }
