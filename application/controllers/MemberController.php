@@ -213,10 +213,22 @@ class MemberController extends CI_Controller{
   function detail_komunitas($key = '')
   {
     $data['user']				= $this->ion_auth->user()->row();
-    
+
     $data['info'] = $this->MainModel->getRowDataWhere('komunitas', '*', 'id_komunitas = '.$key.'');
     $data['title'] 			= 'Informasi';
 		$data['content'] 		= 'contents/detail/d_komunitas';
+    // load file main
+		$this->load->view('main', $data);
+  }
+
+  function detail_makanan($key = '')
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    $data['stok']       = $this->MainModel->countObject('users','id_makan','id_makan = '.$key.'');
+
+    $data['info']       = $this->MainModel->getRowDataWhere('menu_makan', '*', 'id_makan = '.$key.'');
+    $data['title'] 			= 'Informasi';
+		$data['content'] 		= 'contents/detail/d_makanan';
     // load file main
 		$this->load->view('main', $data);
   }
