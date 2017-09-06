@@ -157,6 +157,7 @@
 	                <hr>
 									<p class="description text-left" style="padding:2em;">
 	                    Berikut E-Ticket kamu :<br><br>
+											<i class="ti-star"></i> <strong><?=$menu_saya['username'];?></strong><br>
 											<i class="ti-user"></i> <strong><?=$menu_saya['first_name'];?></strong> <br>
 											<i class="ti-shopping-cart-full"></i> <strong><?=$menu_saya['nama_makanan'];?></strong> <br>
 											<br>Agar kamu bisa mendapatkan makanan pilihamu, Tunjukan E-Ticket ini kepada Rangers yang bertugas ya.

@@ -246,6 +246,7 @@
 	                <hr>
 	                <p class="description text-left" style="padding-left:2em;">
 	                    Berikut E-Ticket kamu,<br><br>
+											<i class="ti-star"></i> <strong><?=$kelas_saya['username'];?></strong><br>
 											<i class="ti-user"></i> <strong><?=$kelas_saya['first_name'];?></strong> <br>
 											<i class="ti-agenda"></i> <strong><?=$kelas_saya['nama_kelas'];?></strong> <br>
 											<i class="ti-location-pin"></i> <strong><?=$kelas_saya['ruang_kelas'];?></strong><br>
