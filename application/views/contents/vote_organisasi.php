@@ -25,12 +25,9 @@
                   <div class="card">
                       <div class="content">
                           <div class="row">
-                              <div class="col-xs-4">
-                                  <img class="img-voting" src="<?=$data['gambar_logo'];?>" alt="<?=$data['nama_komunitas'];?>">
-                              </div>
-                              <div class="col-xs-8">
-                                  <div class="numbers">
-                                      <p>Kelas</p>
+                              <div class="col-xs-12">
+                                  <div class="numbers" style="text-align:center">
+                                      <p>Komunitas #<?=$data['id_komunitas'];?></p>
                                       <?=$data['nama_komunitas'];?>
                                   </div>
                               </div>
@@ -38,8 +35,10 @@
                               <hr />
                               <div class="row">
                                 <div class="text-center">
-                                    <div class="col-xs-12">
-                                        <a href="<?=base_url();?>members/vote-komunitas/<?=$data['id_komunitas'];?>" class="btn btn-primary btn-fill btn-sm btn-block"><i class="fa fa-check-circle"></i>Vote <?=$data['nama_komunitas'];?></a>
+                                  <div class="col-xs-12">
+                                       <a href="<?=base_url();?>members/detail/komunitas/<?=$data['id_komunitas'];?>" class="btn btn-info btn-sm"><i class="ti-search"></i> Selengkapnya</a>
+
+                                        <a href="<?=base_url();?>members/vote-komunitas/<?=$data['id_komunitas'];?>" class="btn btn-success btn-sm btn-fill"><i class="ti-heart"></i> VOTE</a>
                                     </div>
                                 </div>
                               </div>
@@ -69,6 +68,7 @@
                       <hr>
                       <p class="description text-left" style="padding: 0em 1em 0em 2em;">
     	                    Berikut Hasil pilihanmu,<br><br>
+                          <i class="ti-star"></i> <strong><?=$komunitas['username'];?></strong> <br>
     											<i class="ti-user"></i> <strong><?=$komunitas['first_name'];?></strong> <br>
     											<i class="ti-medall"></i> <strong><?=$komunitas['nama_komunitas'];?></strong> <br>
     											<br><i class="fa fa-heart"></i> Terima kasih telah melakukan voting

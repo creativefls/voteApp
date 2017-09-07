@@ -36,7 +36,7 @@
 			              <hr />
 			              <div class="stats">
 			                  <div class="col-xs-6">
-			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                      <a href="<?=base_url();?>members/detail/makanan/1" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
 			                  </div>
 			                  <?php if ($nasi_ayam['jumlah'] >= 100) {
 			                    ?>
@@ -75,7 +75,7 @@
 			              <hr />
 			              <div class="stats">
 			                  <div class="col-xs-6">
-			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                      <a href="<?=base_url();?>members/detail/makanan/2" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
 			                  </div>
 			                  <?php if ($soto_ayam['jumlah'] >= 100) {
 			                    ?>
@@ -114,7 +114,7 @@
 			              <hr />
 			              <div class="stats">
 			                  <div class="col-xs-6">
-			                      <a href="#" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
+			                      <a href="<?=base_url();?>members/detail/makanan/3" class="btn btn-info btn-sm"><i class="ti-search"></i>Selengkapnya</a>
 			                  </div>
 			                  <?php if ($tahu_gimbal['jumlah'] >= 100) {
 			                    ?>
@@ -157,6 +157,7 @@
 	                <hr>
 									<p class="description text-left" style="padding:2em;">
 	                    Berikut E-Ticket kamu :<br><br>
+											<i class="ti-star"></i> <strong><?=$menu_saya['username'];?></strong><br>
 											<i class="ti-user"></i> <strong><?=$menu_saya['first_name'];?></strong> <br>
 											<i class="ti-shopping-cart-full"></i> <strong><?=$menu_saya['nama_makanan'];?></strong> <br>
 											<br>Agar kamu bisa mendapatkan makanan pilihamu, Tunjukan E-Ticket ini kepada Rangers yang bertugas ya.
