@@ -59,7 +59,7 @@
                       <img src="https://user-images.githubusercontent.com/10141928/29747006-4ddf9562-8b16-11e7-8c67-6046135e827d.png" alt="FLS header logo">
                   </div>
                       <div class="author">
-                        <img class="avatar border-gray" src="<?=$komunitas['gambar_logo'];?>" alt="<?=$komunitas['nama_komunitas'];?>">
+                        <img class="avatar border-gray" src="https://user-images.githubusercontent.com/10141928/29747027-e5da50a0-8b16-11e7-9a25-73e3dfa65363.png" alt="<?=$komunitas['nama_komunitas'];?>">
                         <h4 class="title"><?=$komunitas['nama_komunitas'];?><br>
                           <small><?=$komunitas['email'];?></small>
                         </h4>

@@ -24,6 +24,7 @@ class AdminController extends CI_Controller{
     $data['user']				= $this->ion_auth->user()->row();
     $data['workshop']   = $this->MainModel->getRowData('users','count(id_workshop) as jumlah');
     $data['komunitas']  = $this->MainModel->getRowData('users','count(id_komunitas) as jumlah');
+    $data['makan']      = $this->MainModel->getRowData('users','count(id_makan) as jumlah');
 
 		$data['title'] 			= 'Selamat Datang Rangers!';
 		$data['content'] 		= 'contents/admin/adminDashboard';
