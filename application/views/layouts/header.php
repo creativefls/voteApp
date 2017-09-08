@@ -10,6 +10,7 @@
             <a class="navbar-brand" href="<?=base_url();?>">
               <img class="c-logo" src="<?=base_url();?>assets/img/logo/fls-logo-baru.png" alt="FLS Logo">
             </a>
+            <a class="navbar-brand"><?= $title; ?></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
