@@ -21,7 +21,7 @@
           </li>
           <li <?php if($page=="list_makan"){echo 'class="active"';}?>>
               <a href="<?=base_url();?>adminController/list_makan">
-                  <i class="ti-agenda"></i>
+                  <i class="ti-face-smile"></i>
                   <p>Daftar Makanan</p>
               </a>
           </li>
