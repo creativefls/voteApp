@@ -24,7 +24,7 @@ class MemberController extends CI_Controller{
   {
     $data['user']				= $this->ion_auth->user()->row();
 
-    $data['title'] 			= 'Selamat Datang Delegates';
+    $data['title'] 			= 'Beranda';
     $data['content'] 		= 'contents/delegatesDashboard';
     // load file main
     $this->load->view('main', $data);
@@ -43,7 +43,7 @@ class MemberController extends CI_Controller{
     $data['idea_develop']       = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
     $data['customer_insight']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
 
-		$data['title'] 			= 'Kelas Workshop';
+		$data['title'] 			= 'Workshop';
 		$data['content'] 		= 'contents/kelas_workshop';
 		// load file main
 		$this->load->view('main', $data);
