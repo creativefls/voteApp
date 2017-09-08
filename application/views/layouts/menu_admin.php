@@ -19,6 +19,12 @@
                   <p>Kelas Workshop</p>
               </a>
           </li>
+          <li <?php if($page=="list_makan"){echo 'class="active"';}?>>
+              <a href="<?=base_url();?>adminController/list_makan">
+                  <i class="ti-agenda"></i>
+                  <p>Daftar Makanan</p>
+              </a>
+          </li>
           <li <?php if($page=="list_komunitas"){echo 'class="active"';}?>>
               <a href="<?=base_url();?>adminController/list_komunitas">
                   <i class="ti-bar-chart"></i>
