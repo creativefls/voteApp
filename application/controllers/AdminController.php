@@ -91,6 +91,33 @@ class AdminController extends CI_Controller{
   }
 
   // ***************************************************************
+  function list_makan()
+  {
+    // funtion data
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['makan']   = $this->MainModel->getListData('menu_makan',null,null,null);
+
+		$data['title'] 			= 'Pilih Makan';
+		$data['content'] 		= 'contents/admin/makan_list';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
+  function peserta_makan($id_makan)
+  {
+    $data['user']				= $this->ion_auth->user()->row();
+    // lihat kelas sekarang
+    $data['peserta']    = $this->MainModel->getListData('users','id_makan = '.$id_makan.'',null,null);
+    $data['makan']   = $this->MainModel->getRowDataWhere('menu_makan','*','id_makan = '.$id_makan.'');
+
+		$data['title'] 			= 'Peserta makan';
+		$data['content'] 		= 'contents/admin/makan_peserta';
+		// load file main
+		$this->load->view('main', $data);
+  }
+
+  // ***************************************************************
   function list_komunitas()
   {
     $data['user']				= $this->ion_auth->user()->row();
