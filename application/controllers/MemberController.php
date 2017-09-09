@@ -41,7 +41,7 @@ class MemberController extends CI_Controller{
     $data['presentation_skill'] = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
     $data['kelas_content']      = $this->MainModel->countObject('users','id_workshop','id_workshop = 2');
     $data['idea_develop']       = $this->MainModel->countObject('users','id_workshop','id_workshop = 1');
-    $data['customer_insight']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 4');
+    $data['customer_insight']   = $this->MainModel->countObject('users','id_workshop','id_workshop = 5');
 
 		$data['title'] 			= 'Workshop';
 		$data['content'] 		= 'contents/kelas_workshop';
