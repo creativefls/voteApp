@@ -30,7 +30,7 @@
 										<?php
 									} else {
 										?>
-												<a href="<?=base_url();?>members/pilih-menu/3" class="btn btn-success btn-sm btn-fill"><i class="ti-shopping-cart-full"></i> ORDER SEKARANG</a>
+												<a href="<?=base_url();?>members/pilih-menu/<?=$info['id_makan'];?>" class="btn btn-success btn-sm btn-fill"><i class="ti-shopping-cart-full"></i> ORDER SEKARANG</a>
 										<?php
 									}?>
 								</div>
